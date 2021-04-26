@@ -1,0 +1,25 @@
+<h1 class="my-4"> Job Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @job.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.desc %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @job.position %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @job.count %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) , class: "btn btn-primary" %> 
+<%= link_to 'Back', jobs_path, class: "btn btn-primary" %>
+<%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>

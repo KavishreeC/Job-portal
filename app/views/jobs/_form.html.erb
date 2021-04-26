@@ -1,0 +1,39 @@
+<%= form_with(model: job) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+        <% job.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <strong><%= form.label :name, class: "my-2" %></strong>
+    <%= form.text_field :name,class:'form-control w-50' %>
+  </div>
+
+  <div class="field form-group">
+  <strong><%= form.label :position ,class: "my-2"%></strong>
+    <%= form.text_field :position ,class:'form-control w-50'%>
+  </div>
+
+  <div class="field form-group">
+  <strong> <%= form.label :description,class: "my-2" %></strong>
+    <%= form.text_area :desc,class:'form-control w-50' %>
+  </div>
+
+  <div class="field form-group">
+  <strong><%= form.label :count,class: "my-2" %></strong>
+    <%= form.text_field :count,class:'form-control w-50'  %>
+  </div>
+ 
+<br/>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>
