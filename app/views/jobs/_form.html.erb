@@ -19,9 +19,7 @@
   <div class="field form-group">
   <strong> <%= form.label :description,class: "my-2" %></strong>
     <%= form.text_area :desc,class:'form-control w-50' %>
-    <% @job.errors.full_messages_for(:desc).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+   
   </div>
 
   <div class="field form-group">
