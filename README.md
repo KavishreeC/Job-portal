@@ -1,4 +1,4 @@
-# Rails-Jobportal
+# Rails-Job Portal
 
 A simple Job-Portal web application using Rails 6.
 
