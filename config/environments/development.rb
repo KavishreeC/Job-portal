@@ -86,12 +86,12 @@ Rails.application.configure do
   }
 
 
-#   config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :letter_opener
 # # config.action_mailer.perform_deliveries = true
 
-#   LetterOpener.configure do |config|
-#     config.location = Rails.root.join('tmp', 'my_mails')
-#     config.message_template = :light
-#   end
+  LetterOpener.configure do |config|
+    config.location = Rails.root.join('tmp', 'my_mails')
+    config.message_template = :light
+  end
 
 end
