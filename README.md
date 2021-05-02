@@ -1,24 +1,25 @@
-# README
+# Rails-Jobportal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Job-Portal web application using Rails 6.
 
-Things you may want to cover:
+### Purpose
 
-* Ruby version
+### Basic Setups
 
-* System dependencies
+* Ruby version - 3.0.0
+* Rails Version - 6.1.3.1
+* GitHub
 
-* Configuration
+### Important Library
 
-* Database creation
+* gem 'devise' - User Authentication
+* gem 'Figoro' - Set Environment Variables
+* gem 'JWT'    - API Authentication
+* Bootstrap    - Styling
 
-* Database initialization
+### Demo
 
-* How to run the test suite
+Checkout the Application on Heroku - https://job-portal2.herokuapp.com/users/sign_in 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
