@@ -116,7 +116,7 @@ Rails.application.configure do
   # these configuration options.
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
-  config.require_master_key = true
+  # config.require_master_key = true
   config.action_mailer.default_url_options = { :host => 'JOB_PORTAL2.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   # config.action_mailer.raise_delivery_errors = true
