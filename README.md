@@ -22,16 +22,6 @@ Job portal is an online platform that connects the job seekers with recruiters.C
 * Rails Version - 6.1.3.1
 * GitHub
 
-### Important Gems
-
-* gem 'pg'     - Postgresql Database for Active Record 
-* gem 'devise' - User Authentication
-* gem 'Figoro' - Set Environment Variables
-* gem 'JWT'    - Generating and validating JWTs for API Authentication
-* gem 'letter opener' - Preview mails in the browser instead of sending
-* gem 'rabl'   - Customize JSON response
-* Bootstrap    - Styling
-
 To get started with the app:
 
 * `git clone git@github.com:KavishreeC/Job-portal.git` to clone this repo
@@ -50,6 +40,6 @@ To get started with the app:
 
 ### Demo
 
-Checkout the Application on Heroku - https://job-portal2.herokuapp.com/users/sign_in 
+Checkout the Application on Heroku - https://job-portal2.herokuapp.com/
 
 
