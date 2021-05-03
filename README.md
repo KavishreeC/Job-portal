@@ -35,11 +35,17 @@ Job portal is an online platform that connects the job seekers with recruiters.C
 To get started with the app:
 
 * `git clone git@github.com:KavishreeC/Job-portal.git` to clone this repo
+
 * `bundle install` to install all required gems
+
 * Update database.yml file
+
 * `rails db:create` to create database
+
 * `rails db:migrate` to make all database migrations
+
 * `rails s` to start the rails server
+
 * App should be running on http://localhost:3000
 
 ### Demo
