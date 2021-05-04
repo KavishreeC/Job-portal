@@ -71,7 +71,7 @@ class JobsController < ApplicationController
     # flash[:alert] = "You are not authorized to perform this action."
     JobMailer.new_job.deliver_later
     flash[:notice] = "Congratulations! You have successfully applied" 
-    redirect_to joblist_url
+    redirect_to jobseeker_url
   end
 
   def jobseeker
