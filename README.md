@@ -41,5 +41,3 @@ To get started with the app:
 ### Demo
 
 Checkout the Application on Heroku - https://job-portal2.herokuapp.com/
-
-
