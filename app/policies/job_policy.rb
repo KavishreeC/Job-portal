@@ -9,23 +9,28 @@ class JobPolicy < ApplicationPolicy
     def index?
         @current_user.recruiters?
     end
+
     def create?
         @current_user.recruiters?
-      end
+    end
+
     def new?
         create?
     end
+
     def update?
       @current_user.recruiters?
     end
+
     def edit?
       update?
     end
+
     def destroy?
       @current_user.recruiters?
     end
+    
     def jobseeker?
         @current_user.jobseeker?
     end
-  
-  end
+end

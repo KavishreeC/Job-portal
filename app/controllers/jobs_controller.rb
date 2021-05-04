@@ -67,24 +67,23 @@ class JobsController < ApplicationController
     job_position = params[:job_position]
     @user = current_user
     JobApplication.create(user_id: current_user.id, job_id: job_id,email: current_user.email,name: job_name,Position: job_position)
-   
     # flash[:alert] = "You are not authorized to perform this action."
     JobMailer.new_job.deliver_later
     flash[:notice] = "Congratulations! You have successfully applied" 
-    redirect_to jobseeker_url
+    redirect_to jobseeker_path
   end
 
   def jobseeker
     @jobs = Job.all
     authorize Job
-   end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])
     end
-
+    
     # Only allow a list of trusted parameters through.
     def job_params
       params.require(:job).permit(:name, :desc, :position, :count)
