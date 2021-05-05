@@ -9,7 +9,7 @@
   </div>
 
   <div class="field form-group">
-  <strong><%= form.label :position ,class: "my-2"%></strong>
+    <strong><%= form.label :position ,class: "my-2"%></strong>
     <%= form.text_field :position ,class:'form-control w-50'%>
     <% @job.errors.full_messages_for(:position).each do |message| %>
       <div><%= message %></div>
@@ -17,20 +17,17 @@
   </div>
 
   <div class="field form-group">
-  <strong> <%= form.label :description,class: "my-2" %></strong>
+    <strong> <%= form.label :description,class: "my-2" %></strong>
     <%= form.text_area :desc,class:'form-control w-50' %>
-   
   </div>
 
   <div class="field form-group">
-  <strong><%= form.label :count,class: "my-2" %></strong>
+    <strong><%= form.label :count,class: "my-2" %></strong>
     <%= form.text_field :count,class:'form-control w-50'  %>
     <% @job.errors.full_messages_for(:count).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
- 
-<br/>
+  </div><br/>
 
   <div class="actions">
     <%= form.submit class:"btn btn-primary" %>
