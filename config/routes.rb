@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get 'home/index'
   resources :jobs 
   resources :users
+  resources :job_applications
   root to: "jobs#index"
   namespace :api do
     namespace :v1 do
-     
       # post 'authenticate', to: 'authentication#authenticate'
       resources :jobs
     end

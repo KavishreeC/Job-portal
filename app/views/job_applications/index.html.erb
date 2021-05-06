@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="d-flex justify-content-center my-3">Applicants List</h1>
+  <table class="table table-bordered">
+    <thead class='table-dark'>
+      <tr>
+        <th>User Email</th>
+        <th>Company </th>
+        <th>Position</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @applicants.each do |applicant| %>
+        <tr>
+          <td><%= applicant.email %></td>
+          <td><%= applicant.name %></td>
+          <td><%= applicant.Position %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
