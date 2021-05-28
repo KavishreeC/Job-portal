@@ -1,35 +1,38 @@
-<%= form_with(model: job) do |form| %>
+<div id="job_form">
+  <%= form_with(model: job) do |form| %>
 
-  <div class="field form-group">
-    <strong><%= form.label :name, class: "my-2" %></strong>
-    <%= form.text_field :name,class:'form-control w-50' %>
-    <% @job.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class="field form-group">
+      <strong><%= form.label :name  %></strong>
+      <%= form.text_field :name,class:'form-control ' %>
+      <% @job.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div class="field form-group">
-    <strong><%= form.label :position ,class: "my-2"%></strong>
-    <%= form.text_field :position ,class:'form-control w-50'%>
-    <% @job.errors.full_messages_for(:position).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class="field form-group">
+      <strong><%= form.label :position%></strong>
+      <%= form.text_field :position ,class:'form-control'%>
+      <% @job.errors.full_messages_for(:position).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div class="field form-group">
-    <strong> <%= form.label :description,class: "my-2" %></strong>
-    <%= form.text_area :desc,class:'form-control w-50' %>
-  </div>
+    <div class="field form-group">
+      <strong> <%= form.label :description %></strong>
+      <%= form.text_area :desc,class:'form-control ' %>
+    </div>
 
-  <div class="field form-group">
-    <strong><%= form.label :count,class: "my-2" %></strong>
-    <%= form.text_field :count,class:'form-control w-50'  %>
-    <% @job.errors.full_messages_for(:count).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div><br/>
+    <div class="field form-group">
+      <strong><%= form.label :count %></strong>
+      <%= form.text_field :count,class:'form-control'  %>
+      <% @job.errors.full_messages_for(:count).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div><br/>
 
-  <div class="actions">
-    <%= form.submit class:"btn btn-primary" %>
-  </div>
-<% end %>
+    <div class="actions d-flex justify-content-between">
+      <%= form.submit class:"btn btn-primary" %>
+    </div><br>
+    <%= link_to 'Back', jobs_path, class: "btn btn-primary mb-2 back_btn" %>
+  <% end %>
+</div>

@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   before_action :authenticate_user!
   # GET /jobs or /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.order(:name).page(params[:page])
     authorize Job
   end
 

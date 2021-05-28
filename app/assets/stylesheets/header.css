@@ -1,0 +1,8 @@
+.navbar
+{
+    background-color: indigo;
+}
+.navbar .nav-link, .navbar .navbar-brand
+{
+    color:white;
+}

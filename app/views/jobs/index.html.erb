@@ -1,7 +1,7 @@
 <div class="container">
-  <h1 class="d-flex justify-content-center">Job List</h1>
-  <table class="table table-bordered">
-    <thead class='table-dark'>
+  <h1 class="d-flex justify-content-center job_heading">Job List</h1>
+  <table class="table table-bordered" id="job_table">
+    <thead>
       <tr>
         <th>Name </th>
         <th>Position </th>
@@ -17,13 +17,15 @@
           <td><%= job.position %></td>
           <td><%= job.desc %></td>
           <td><%= job.count %></td>
-          <td><%= link_to 'Show', job , class:"btn btn-primary" %></td>
-          <td><%= link_to 'Edit', edit_job_path(job),class:"btn btn-primary" %></td>
-          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+          <td><%= link_to 'Show', job , class:"btn show_btn" %></td>
+          <td><%= link_to 'Edit', edit_job_path(job),class:"btn edit_btn" %></td>
+          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' },class:"btn delete_btn" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  
   <br>
-  <%= link_to 'New Job', new_job_path , class: "btn btn-primary" %>
+  <%= link_to 'Add New Job', new_job_path , class: "btn job_btn" %>
+  <%= paginate @jobs %>
 </div>

@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+ /*
+ *= require font-awesome
+ */
+
+ *
+ {
+     font-family:Arial, Helvetica, sans-serif; 
+ }
+.pagination 
+{
+    border-left: 1px solid #ddd;
+    float: right;
+}
+.pagination a, .pagination span.current, .pagination span.gap 
+{
+    float: right;
+    padding: 0 14px;
+    line-height: 28px;
+    background-color: white;
+    color:black;
+    text-decoration: none;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+    
+}
+.pagination span.current
+{
+    background-color: rgb(75, 0, 130);
+    color:white;
+}
+.pagination a:hover
+{
+    background-color: rgb(75, 0, 130);
+    color:white;
+}
+

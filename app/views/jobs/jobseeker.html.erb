@@ -1,29 +1,22 @@
-<div class="container">
-  <h1 class="d-flex justify-content-center">Job List</h1>
-  <table class="table table-bordered">
-    <thead class='table-dark'>
-      <tr>
-        <th>Name </th>
-        <th>Position </th>
-        <th>Description </th>
-        <th>Vacancy </th>
-        <th></th>
-      </tr>
-    </thead>
-    <tboday>
-      <% @jobs.each do |job| %>
-        <tr>
-          <td><%= job.name %></td>
-          <td><%= job.position %></td>
-          <td><%= job.desc %></td>
-          <td><%= job.count %></td>
-          <% if job.has_applied?(current_user,job.id) %>
-            <td><%= button_to "Applied" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn btn-success" %></td>
-          <% else %>
-            <td><%= button_to "Apply" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn btn-success"%></td>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<div id="job_seeker">
+  <div class="container">
+    <p class="d-flex justify-content-center" id="heading">Job Details</p>
+    <% @jobs.each do |job| %>
+      <ul class="list-group">
+        <li class="list-group-item align-items-center">
+          <div id="job_details">
+            <span>Company Name :</span> <%= job.name %><br>
+            <span>Position : </span><%= job.position %><br>
+            <span>Job Description : </span><%= job.desc %><br>
+            <span>Vaccancy : </span><%= job.count %><br><br>
+            <% if job.has_applied?(current_user,job.id) %>
+              <%= button_to "Applied" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn applied_btn" %>
+            <% else %>
+              <%= button_to "Apply for the job" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn apply_btn"%>
+            <% end %>
+          </div>
+        </li>
+      </ul> 
+    <% end %>
+  </div>
 </div>
