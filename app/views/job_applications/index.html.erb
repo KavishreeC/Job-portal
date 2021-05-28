@@ -1,7 +1,7 @@
-<div class="container">
-  <h1 class="d-flex justify-content-center my-3">Applicants List</h1>
-  <table class="table table-bordered">
-    <thead class='table-dark'>
+<div class="job_applicants ">
+  <p class="d-flex justify-content-center my-3 applicants_heading">Applicants List</p>
+  <table class="table table-bordered" id="applicants_table">
+    <thead>
       <tr>
         <th>User Email</th>
         <th>Company </th>
@@ -18,4 +18,7 @@
       <% end %>
     </tbody>
   </table>
+  <div id="appicants_page">
+    <%= paginate @applicants %>
+  </div>
 </div>

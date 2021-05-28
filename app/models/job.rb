@@ -1,6 +1,7 @@
 class Job < ApplicationRecord
   has_many :job_applications
   has_many :users, through: :job_applications
+  paginates_per 4
   validates :name,presence: true
   # validates :desc,presence: true
   validates :count,presence: true

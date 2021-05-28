@@ -20,6 +20,6 @@
   <%= @job.count %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) , class: "btn btn-primary" %> 
+<%= link_to 'Edit', edit_job_path(@job) , class: "btn edit_btn" %> 
 <%= link_to 'Back', jobs_path, class: "btn btn-primary" %>
-<%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn delete_btn" %>
