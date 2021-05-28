@@ -9,12 +9,11 @@
             <span>Position : </span><%= job.position %><br>
             <span>Job Description : </span><%= job.desc %><br>
             <span>Vaccancy : </span><%= job.count %><br><br>
-          
-          <% if job.has_applied?(current_user,job.id) %>
-            <%= button_to "Applied" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn applied_btn" %>
-          <% else %>
-            <%= button_to "Apply for the job" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn apply_btn"%>
-          <% end %>
+            <% if job.has_applied?(current_user,job.id) %>
+              <%= button_to "Applied" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn applied_btn" %>
+            <% else %>
+              <%= button_to "Apply for the job" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn apply_btn"%>
+            <% end %>
           </div>
         </li>
       </ul> 

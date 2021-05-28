@@ -17,7 +17,10 @@
  *= require font-awesome
  */
 
-
+ *
+ {
+     font-family:Arial, Helvetica, sans-serif; 
+ }
 .pagination 
 {
     border-left: 1px solid #ddd;
@@ -45,7 +48,4 @@
     background-color: rgb(75, 0, 130);
     color:white;
 }
-i
-{
-    color:white
-}
+
