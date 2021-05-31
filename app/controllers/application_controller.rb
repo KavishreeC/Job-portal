@@ -15,12 +15,11 @@ class ApplicationController < ActionController::Base
 
   private
   def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action."
     if current_user.role == 'jobseeker' 
       redirect_to  jobseeker_path
-      flash[:alert] = "You are not authorized to perform this action."
     elsif current_user.role == 'recruiters'
       redirect_to  jobs_path
-      flash[:alert] = "You are not authorized to perform this action."
     end
   end
 end
