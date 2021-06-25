@@ -1,25 +1,25 @@
-<h1 class="my-4"> Job Details</h1>
+<h1 class="my-4"><%= t('.jobdetails') %></h1>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('.name') %> : </strong>
   <%= @job.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('.desc') %> : </strong>
   <%= @job.desc %>
 </p>
 
 <p>
-  <strong>Position:</strong>
+  <strong><%= t('.position') %> : </strong>
   <%= @job.position %>
 </p>
 
 <p>
-  <strong>Count:</strong>
+  <strong><%= t('.count') %> : </strong>
   <%= @job.count %>
 </p>
 
-<%= link_to 'Edit', edit_job_path(@job) , class: "btn edit_btn" %> 
-<%= link_to 'Back', jobs_path, class: "btn btn-primary" %>
-<%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn delete_btn" %>
+<%= link_to t('.edit'), edit_job_path(@job) , class: "btn edit_btn" %> 
+<%= link_to t('.back'), jobs_path, class: "btn btn-primary" %>
+<%= link_to t('.delete'), @job, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn delete_btn" %>

@@ -18,8 +18,8 @@ gem 'simple_command'
 # gem 'bootstrap'
 # gem 'popper_js'
 # gem 'kaminari'
-gem 'rabl'
-gem 'oj'
+# gem 'rabl'
+# gem 'oj'
 gem "figaro"
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
@@ -33,10 +33,12 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'elasticsearch', '~> 7.13', '>= 7.13.1'
+gem "typhoeus", "~> 1.3.1"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'rails-i18n', '~> 6.0'
+gem 'httparty', '~> 0.18.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -56,6 +58,7 @@ group :development do
   gem 'spring'
   # gem "letter_opener"
   gem "letter_opener", :group => :development
+  gem 'bullet', group: 'development'
 end
 
 group :test do

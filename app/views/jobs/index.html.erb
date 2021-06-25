@@ -1,12 +1,13 @@
 <div class="container">
-  <h1 class="d-flex justify-content-center job_heading">Job List</h1>
+  <h1 class="d-flex justify-content-center job_heading"> <%= t('.joblist') %> </h1>
   <table class="table table-bordered" id="job_table">
     <thead>
       <tr>
-        <th>Name </th>
-        <th>Position </th>
-        <th>Description </th>
-        <th>Vacancy </th>
+        <th><%= t('.name') %></th>
+        <th><%= t('.position') %></th>
+        <th><%= t('.desc') %></th>
+        <th><%= t('.count') %></th>
+        <th><%= t('.applicantsemail') %></th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -17,15 +18,16 @@
           <td><%= job.position %></td>
           <td><%= job.desc %></td>
           <td><%= job.count %></td>
-          <td><%= link_to 'Show', job , class:"btn show_btn" %></td>
-          <td><%= link_to 'Edit', edit_job_path(job),class:"btn edit_btn" %></td>
-          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' },class:"btn delete_btn" %></td>
+          <td><%= job.job_applications.map(&:email) %></td>
+          <td><%= link_to t('.show'), job , class:"btn show_btn" %></td>
+          <td><%= link_to t('.edit'), edit_job_path(job),class:"btn edit_btn" %></td>
+          <td><%= link_to t('.delete'), job, method: :delete, data: { confirm: 'Are you sure?' },class:"btn delete_btn" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   
   <br>
-  <%= link_to 'Add New Job', new_job_path , class: "btn job_btn" %>
+  <%= link_to t('.newjob'), new_job_path , class: "btn job_btn" %>
   <%= paginate @jobs %>
 </div>

@@ -1,6 +1,6 @@
 class JobApplication < ApplicationRecord
-  belongs_to :job
-  belongs_to :user
+  has_many :job_applications
+  has_many :jobs, through: :job_applications
   validates :user_id,presence: true
   validates :job_id,presence: true
   paginates_per 8

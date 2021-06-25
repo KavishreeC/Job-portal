@@ -1,33 +1,36 @@
 <nav class="navbar navbar-expand-sm sticky-top mb-3 d-flex justify-content-between">
-  <a class="navbar-brand" href="#">JOB-PORTAL</a>
+  <a class="navbar-brand" href="#"><%= t('global.menu.jobportal') %></a>
   <ul class="navbar-nav">
+    
     <% if user_signed_in? %>
       <% if current_user.role == 'jobseeker' %>
         <li class="nav-item ">
-            <%= link_to 'Home', jobseeker_path , class:'nav-link' %>
+            <%= link_to t('global.menu.home'), jobseeker_path , class:'nav-link' %>
         </li>
         <li class="nav-item">
-            <%= link_to 'Logout',  destroy_user_session_path,method: :delete , class:'nav-link' %>
+            <%= link_to t('global.menu.logout'),  destroy_user_session_path,method: :delete , class:'nav-link' %>
         </li>
       <% elsif current_user.role == 'recruiters' %>
         <li class="nav-item ">
-            <%= link_to 'Home', jobs_path , class:'nav-link' %>
+            <%= link_to t('global.menu.home'), jobs_path , class:'nav-link' %>
         </li>
         <li class="nav-item ">
-          <%= link_to 'Applicants', job_applications_path , class:'nav-link' %>
+          <%= link_to t('global.menu.applicants'), job_applications_path , class:'nav-link' %>
         </li>
         <li class="nav-item">
-            <%= link_to 'Logout',  destroy_user_session_path,method: :delete , class:'nav-link' %>
+            <%= link_to t('global.menu.logout'),  destroy_user_session_path,method: :delete , class:'nav-link' %>
         </li>
       <% end %>
     <% else %>
       <li class="nav-item">
-        <%= link_to 'Login',  new_user_session_path , class:'nav-link' %>
+        <%= link_to t('global.menu.login'),  new_user_session_path , class:'nav-link' %>
       </li>
       
       <li class="nav-item">
-        <%= link_to 'Signup',  new_user_registration_path , class:'nav-link' %>
+        <%= link_to t('global.menu.signup'),  new_user_registration_path , class:'nav-link' %>
       </li>
+      
+      
     <% end %>
   </ul>
 </nav>

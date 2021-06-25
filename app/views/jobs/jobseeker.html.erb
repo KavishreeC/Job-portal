@@ -1,18 +1,18 @@
 <div id="job_seeker">
   <div class="container">
-    <p class="d-flex justify-content-center" id="heading">Job Details</p>
+    <p class="d-flex justify-content-center" id="heading"><%= t('.jobdetails') %></p>
     <% @jobs.each do |job| %>
       <ul class="list-group">
         <li class="list-group-item align-items-center">
           <div id="job_details">
-            <span>Company Name :</span> <%= job.name %><br>
-            <span>Position : </span><%= job.position %><br>
-            <span>Job Description : </span><%= job.desc %><br>
-            <span>Vaccancy : </span><%= job.count %><br><br>
+            <span><%= t('.companyname')  %> : </span> <%= job.name %><br>
+            <span><%= t('.position')  %> :  </span><%= job.position %><br>
+            <span><%= t('.jobdesc')  %> : </span><%= job.desc %><br>
+            <span><%= t('.vacancy')  %> : </span><%= job.count %><br><br>
             <% if job.has_applied?(current_user,job.id) %>
-              <%= button_to "Applied" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn applied_btn" %>
+              <%= button_to t('.applied')  ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post", disabled: true,class:"btn applied_btn" %>
             <% else %>
-              <%= button_to "Apply for the job" ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn apply_btn"%>
+              <%= button_to t('.apply')  ,apply_path(job_id: job.id,job_name: job.name,job_position: job.position),method: "post" ,class:"btn apply_btn"%>
             <% end %>
           </div>
         </li>
