@@ -1,0 +1,51 @@
+fr:
+  global:
+    menu:
+      login: "Connexion"
+      signup: "Inscrivez-vous"
+      logout: "Se déconnecter"
+      applicants: "Candidats"
+      home: "Domicile"
+      jobportal: "PORTAIL D'EMPLOI"
+      
+  jobs:
+    index:
+      joblist: "Liste d'emplois"
+      name: "Nom"
+      position: "Positionner"
+      desc: "la description"
+      count: "poste vacant"
+      applicantsemail: "Courriel des candidats"
+      newjob: "Ajouter un nouveau travail"
+      show: "Spectacle"
+      edit: "Éditer"
+      delete: "effacer"
+    
+    new:
+      newjob: "Ajouter un nouveau travail"
+
+    show:
+      jobdetails: "Détails du poste"
+      name: "Nom"
+      position: "Positionner"
+      desc: "la description"
+      count: "poste vacant"
+      edit: "Éditer"
+      back: "Dos"
+      delete: "effacer"
+
+    jobseeker:
+      jobdetails: "Détails du poste"
+      compayname: "Nom de la compagnie"
+      position: "Positionner"
+      jobdesc: "Description de l'emploi"
+      vacancy: "poste vacant"
+      applied: "Appliquée"
+      apply: "Appliquer"
+
+  job_applications:
+    index:
+      applicants: "Liste des candidats"
+      useremail: "Courriel de l'utilisateur"
+      company: "entreprise"
+      position: "positionner"
