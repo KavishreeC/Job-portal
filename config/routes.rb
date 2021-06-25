@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+
   devise_for :users
-  scope "/:locale" do
     get 'home/index'
     resources :jobs 
     resources :users
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
     root to: "jobs#index"
     post 'apply' => "jobs#apply"
     get 'jobseeker' => "jobs#jobseeker"
-  end
+ 
   namespace :api do
     namespace :v1 do
       # post 'authenticate', to: 'authentication#authenticate'
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   post 'authenticate', to: 'authentication#authenticate'
   get 'authenticate', to: 'authentication#authenticate'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
 end
