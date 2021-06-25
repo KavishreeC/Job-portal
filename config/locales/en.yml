@@ -36,7 +36,7 @@ en:
 
     jobseeker:
       jobdetails: "Job Details"
-      compayname: "Company Name"
+      companyname: "Company Name"
       position: "Position"
       jobdesc: "Job Description"
       vacancy: "Vacancy"
