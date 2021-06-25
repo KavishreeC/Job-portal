@@ -36,7 +36,7 @@ fr:
 
     jobseeker:
       jobdetails: "Détails du poste"
-      compayname: "Nom de la compagnie"
+      companyname: "Nom de la compagnie"
       position: "Positionner"
       jobdesc: "Description de l'emploi"
       vacancy: "poste vacant"
