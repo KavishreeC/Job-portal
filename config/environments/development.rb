@@ -1,4 +1,6 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   config.after_initialize do
@@ -6,12 +8,10 @@ Rails.application.configure do
     Bullet.alert         = true
     Bullet.bullet_logger = true
     Bullet.console       = true
-  # Bullet.growl         = true
+    # Bullet.growl         = true
     Bullet.rails_logger  = true
     Bullet.add_footer    = true
   end
-
-
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -87,26 +87,25 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
   config.action_mailer.delivery_method = :smtp
-  
+
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: 'smtp.gmail.com',
     port: 587,
-    authentication: "plain",
+    authentication: 'plain',
     enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD']
   }
 
   config.action_mailer.delivery_method = :letter_opener
   # config.action_mailer.perform_deliveries = true
-LetterOpener.configure do |config|
-  # To overrider the location for message storage.
-  # Default value is `tmp/letter_opener`
-  config.location = Rails.root.join('tmp', 'my_mails')
+  LetterOpener.configure do |config|
+    # To overrider the location for message storage.
+    # Default value is `tmp/letter_opener`
+    config.location = Rails.root.join('tmp', 'my_mails')
 
-  # To render only the message body, without any metadata or extra containers or styling.
-  # Default value is `:default` that renders styled message with showing useful metadata.
-  config.message_template = :light
-end
-
+    # To render only the message body, without any metadata or extra containers or styling.
+    # Default value is `:default` that renders styled message with showing useful metadata.
+    config.message_template = :light
+  end
 end

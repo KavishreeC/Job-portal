@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -8,9 +10,9 @@ Bundler.require(*Rails.groups)
 
 module PortalJob
   class Application < Rails::Application
-    config.autoload_paths <<  Rails.root.join("lib")
+    config.autoload_paths << Rails.root.join('lib')
     # Initialize configuration defaults for originally generated Rails version.
-    
+
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
@@ -20,7 +22,7 @@ module PortalJob
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.i18n.available_locales = [:en, :fr, :ru]
+    config.i18n.available_locales = %i[en fr ru]
     config.i18n.default_locale = :en
     # config.i18n.fallbacks = true
   end
