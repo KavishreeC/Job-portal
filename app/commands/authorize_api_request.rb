@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthorizeApiRequest
   prepend SimpleCommand
 
@@ -30,6 +32,7 @@ class AuthorizeApiRequest
     else
       errors.add(:token, 'Missing token')
     end
+
     nil
   end
 end

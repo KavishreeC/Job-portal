@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 class JobPolicy < ApplicationPolicy
   attr_reader :current_user, :job
+
   def initialize(current_user, job)
     @job = job
     @current_user = current_user
   end
-  
+
   def index?
     @current_user.recruiters?
   end
@@ -28,7 +31,7 @@ class JobPolicy < ApplicationPolicy
   def destroy?
     @current_user.recruiters?
   end
-    
+
   def jobseeker?
     @current_user.jobseeker?
   end

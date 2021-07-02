@@ -1,1 +1,3 @@
-json.(jobdetails, :name, :position)
+# frozen_string_literal: true
+
+json.call(jobdetails, :name, :position)

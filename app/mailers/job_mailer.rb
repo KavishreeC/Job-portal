@@ -1,5 +1,6 @@
-class JobMailer < ApplicationMailer
+# frozen_string_literal: true
 
+class JobMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -7,6 +8,6 @@ class JobMailer < ApplicationMailer
   #
   def new_job
     @apply = JobApplication.last
-    mail to: @apply.email,subject: "Thank you for your application"
+    mail to: @apply.email, subject: 'Thank you for your application.'
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
@@ -5,21 +7,24 @@ class ApplicationController < ActionController::Base
   include Pundit
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # attr_reader :current_user
-  
+
   def after_sign_in_path
-    if current_user.role == 'jobseeker' 
+    case current_user.role
+    when 'jobseeker'
       jobseeker_path
-    elsif current_user.role == 'recruiters'
+    when 'recruiters'
       jobs_path
-    end 
+    end
   end
 
   private
+
   def user_not_authorized
-    flash[:alert] = "You are not authorized to perform this action."
-    if current_user.role == 'jobseeker' 
+    flash[:alert] = 'You are not authorized to perform this action.'
+    case current_user.role
+    when 'jobseeker'
       redirect_to  jobseeker_path
-    elsif current_user.role == 'recruiters'
+    when 'recruiters'
       redirect_to  jobs_path
     end
   end
