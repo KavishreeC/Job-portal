@@ -5,6 +5,7 @@
       <ul class="list-group">
         <li class="list-group-item align-items-center">
           <div id="job_details">
+            <span><%= t('.banner')  %> : </span><%= image_tag(job.banner_url.to_s, :size => "100x50") if job.banner?   %><br>
             <span><%= t('.companyname')  %> : </span> <%= job.name %><br>
             <span><%= t('.position')  %> :  </span><%= job.position %><br>
             <span><%= t('.jobdesc')  %> : </span><%= job.desc %><br>

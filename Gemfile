@@ -37,9 +37,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave', '~> 2.0'
 gem 'elasticsearch', '~> 7.13', '>= 7.13.1'
-gem 'typhoeus', '~> 1.3.1'
 gem 'friendly_id', '~> 5.4.0'
+gem 'typhoeus', '~> 1.3.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'httparty', '~> 0.18.1'

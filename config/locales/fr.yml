@@ -11,6 +11,7 @@ fr:
   jobs:
     index:
       joblist: "Liste d'emplois"
+      banner: "Bannière"
       name: "Nom"
       position: "Positionner"
       desc: "la description"
@@ -26,6 +27,7 @@ fr:
 
     show:
       jobdetails: "Détails du poste"
+      banner: "Bannière"
       name: "Nom"
       position: "Positionner"
       desc: "la description"
@@ -42,6 +44,8 @@ fr:
       vacancy: "poste vacant"
       applied: "Appliquée"
       apply: "Appliquer"
+      banner: "Bannière"
+
 
   job_applications:
     index:

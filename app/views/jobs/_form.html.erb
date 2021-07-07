@@ -30,6 +30,11 @@
       <% end %>
     </div><br/>
 
+    <div class="field form-group">
+      <strong><%= form.label :banner %></strong>
+      <%= form.file_field :banner, class: 'form-control' %>
+    </div><br/>
+
     <div class="actions d-flex justify-content-between">
       <%= form.submit class:"btn btn-primary" %>
     </div><br>
