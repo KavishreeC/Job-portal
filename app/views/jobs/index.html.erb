@@ -3,6 +3,7 @@
   <table class="table table-bordered" id="job_table">
     <thead>
       <tr>
+        <th><%= t('.banner') %></th>
         <th><%= t('.name') %></th>
         <th><%= t('.position') %></th>
         <th><%= t('.desc') %></th>
@@ -14,7 +15,8 @@
     <tbody>
       <% @jobs.each do |job| %>
         <tr>
-          <td><%= job.name %></td>
+          <td><%= image_tag(job.banner_url.to_s, :size => "100x50") if job.banner?   %></td>
+          <td><%= job.name%></td>
           <td><%= job.position %></td>
           <td><%= job.desc %></td>
           <td><%= job.count %></td>

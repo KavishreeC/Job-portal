@@ -1,5 +1,8 @@
 <h1 class="my-4"><%= t('.jobdetails') %></h1>
-
+<p>
+  <strong><%= t('.banner') %> : </strong>
+  <%= image_tag(@job.banner_url.to_s, :size => "100x50") if @job.banner?   %>
+</p>
 <p>
   <strong><%= t('.name') %> : </strong>
   <%= @job.name %>
